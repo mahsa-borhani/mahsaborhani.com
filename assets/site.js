@@ -12,6 +12,24 @@
       try { localStorage.setItem(key, next); } catch (e) {}
     });
   }
+  [].slice.call(document.querySelectorAll(".email-btn")).forEach(function (b) {
+    b.addEventListener("click", function () {
+      var rev = function (x) { return (x || "").split("").reverse().join(""); };
+      var addr = rev(b.getAttribute("data-b")) + "\u0040" + rev(b.getAttribute("data-a"));
+      var a = document.createElement("a");
+      a.href = "mai" + "lto:" + addr; a.textContent = addr;
+      a.className = b.classList.contains("link-btn") ? "email-link" : b.className.replace("email-btn", "").replace("ghost", "primary");
+      b.parentNode.replaceChild(a, b);
+      if (!a.classList.contains("email-link") && navigator.clipboard) {
+        var c = document.createElement("button");
+        c.type = "button"; c.className = "copy-btn"; c.textContent = "Copy";
+        c.addEventListener("click", function () {
+          navigator.clipboard.writeText(addr).then(function () { c.textContent = "Copied"; });
+        });
+        a.parentNode.insertBefore(c, a.nextSibling);
+      }
+    });
+  });
   var filters = [].slice.call(document.querySelectorAll(".filter"));
   var cards = [].slice.call(document.querySelectorAll(".s-card[data-groups]"));
   filters.forEach(function (f) {

@@ -7,7 +7,7 @@
      To go public later: delete this line on every page and empty robots.txt. -->
 <meta name="robots" content="noindex, nofollow">
 <title>A team of AI agents, with brakes · Mahsa Borhani</title>
-<meta name="description" content="I designed and built a production AI agent system myself, in Claude Code: about twenty roles across sales, operations, reporting, advertising and QA, working every day against live store, advertising, search and CRM data. Twenty-two versioned releases between April and October 2026.">
+<meta name="description" content="I built a production AI agent system myself, in Claude Code: about twenty roles across sales, operations, reporting, advertising and QA, working every day against live store, advertising, search and CRM data. Twenty-two versioned releases between April and October 2026.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e6b5c'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='white'%3EMB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,20 +39,21 @@
     <p class="chip">AI in production · 2026</p>
     <h1>A team of AI agents, with brakes</h1>
     <p class="metric">22 releases</p>
-    <p class="lede">I designed and built a production AI agent system myself, in Claude Code: about twenty roles across sales, operations, reporting, advertising and QA, working every day against live store, advertising, search and CRM data. Twenty-two versioned releases between April and October 2026.</p>
-    <div class="kpis"><div class="kpi"><b>22</b><span>versioned releases, April to October 2026</span></div><div class="kpi"><b>~20</b><span>agent roles</span></div><div class="kpi"><b>4 in 10</b><span>first drafts sent back by QA</span></div><div class="kpi"><b>6</b><span>colleagues coached one-on-one</span></div></div>
-    <ul class="facts"><li><b>Built in</b>Claude Code, versioned in Git</li><li><b>Runs on</b>Live store, advertising, search and CRM data</li></ul>
+    <p class="lede">I built a production AI agent system myself, in Claude Code: about twenty roles across sales, operations, reporting, advertising and QA, working every day against live store, advertising, search and CRM data. Twenty-two versioned releases between April and October 2026.</p>
+    <div class="kpis"><div class="kpi"><b>22</b><span>versioned releases, April to October 2026</span></div><div class="kpi"><b>~363</b><span>pull requests, April to November 2026</span></div><div class="kpi"><b>4 in 10</b><span>first drafts sent back by QA</span></div><div class="kpi"><b>94</b><span>lessons, each written as a rule</span></div></div>
+    <ul class="facts"><li><b>Built in</b>Claude Code, versioned in Git</li><li><b>Runs on</b>Live store, advertising, search and CRM data</li><li><b>Roles</b>About 20, from sales to QA</li></ul>
   </div>
 </div>
 <article class="story-body" style="--c:var(--c0)">
     <section class="block reveal"><h2>The business problem</h2><p>The business needed monitoring, reporting, forecasting and listings work done every day without adding headcount, and safely: nothing published, spent or deleted by an AI on its own.</p></section>
     <section class="block reveal"><h2>How it’s built</h2><ul><li>Each agent has one role and a written playbook. Work moves through a pipeline: drafted from live data, checked by a second agent, approved by a person.</li><li>Monitoring, anomaly alerts, reporting, forecasting and documentation run daily; listings, titles and product-feed fixes run through the same pipeline.</li><li>Four rules, enforced in code rather than remembered: the agent that produces never reviews; anything customer-facing needs two independent sources; anything irreversible waits for a person; every change is versioned in Git.</li><li>Least privilege: its Microsoft 365 access is an Entra ID app holding a single Sites.Selected permission that reaches only one SharePoint site, approved by IT from a ready-to-approve request I wrote. One of about 15 Microsoft 365 requests I’ve worked through with IT.</li><li>Forecasts checked against outcomes: the model resamples our real orders, out-predicted the target three 30-day sprints running, and I wrote the fourth sprint’s range down before any order existed.</li></ul></section>
     <section class="block reveal"><h2>Why the rules exist</h2><p>In August I reviewed 32 incidents and found one cause behind them: the agent that did the work had also certified it. I rebuilt the system around separation of duties. Now QA sends back four in ten first drafts before anyone sees them, and half of content drafts.</p></section>
+    <section class="block reveal"><h2>Rigor, in numbers</h2><p>About 363 pull requests (327 merged) and 996 tickets between April and November 2026; 26 recurring scheduled tasks; and 94 lessons, each written as a rule beside the mistake that taught it.</p><p>QA’s most common catches are a wrong fact or number (about 57% of returns) and an unsupported claim (about 40%). When I found that the done-checker passed any ticket that merely named an existing file, and 189 tickets had passed that way, I rewrote it. Once a brief exists, work goes live the same day to within a week; the fastest, four technical pages, went from first review to live in one working day.</p></section>
     <section class="block reveal"><h2>The brakes, in practice</h2><p>An automated finding once proposed cancelling five container orders as duplicates. The human-approval rule held; I re-derived the truth from purchase orders, internal documents and shipping records, and all five were real.</p></section>
     <section class="block reveal"><h2>People and adoption</h2><p>I packaged the system into a kit with a plain-English guide, role playbooks and safety rules, wrote the AI adoption plan for leadership and an AI-assisted interview kit for hiring, and coached six people one-on-one on AI tools, from the business owner and controller to the supply chain manager and sales lead.</p><p>I’m now coordinating the AI implementation across two companies in the group, on a platform I brought in.</p></section>
     <section class="block reveal"><h2>What I learned</h2><blockquote>A gate that never fails anything is decoration.</blockquote><p>The full method is written up on <a href="https://github.com/mahsa-borhani/how-i-build-ai-agents" rel="noopener">my GitHub</a>.</p></section>
     <section class="block reveal"><h2>Skills in play</h2><ul class="chips"><li>Claude Code</li><li>Agent architecture</li><li>AI governance</li><li>Least privilege</li><li>Forecasting</li><li>Git</li><li>AI adoption</li></ul></section>
-    <section class="block measured reveal"><h2>How it’s measured</h2><p>Releases from the version history. QA return rate across 455 first drafts, October to November 2026.</p></section>
+    <section class="block measured reveal"><h2>How it’s measured</h2><p>Releases, pull requests and tickets from the version history and the tracker. QA return rate across 455 first-time grades, October 15 to November 5, 2026.</p></section>
 </article>
 <nav class="pager" aria-label="More case studies">
   <a href="adoption.html"><span>← Previous</span><b>Every salesperson on board, none reporting to me</b></a>
@@ -62,7 +63,7 @@
 </main>
 <footer class="foot"><div class="wrap">
   <p>© 2026 Mahsa Borhani · Vancouver, BC</p>
-  <p class="foot-links"><a href="mailto:mahsa.borh@gmail.com">Email</a><a href="https://www.linkedin.com/in/mahsa-borhani" rel="noopener">LinkedIn</a><a href="https://github.com/mahsa-borhani" rel="noopener">GitHub</a></p>
+  <p class="foot-links"><button type="button" class="link-btn email-btn" data-a="moc.liamg" data-b="hrob.asham">Email</button><a href="https://www.linkedin.com/in/mahsa-borhani" rel="noopener">LinkedIn</a><a href="https://github.com/mahsa-borhani" rel="noopener">GitHub</a></p>
 </div></footer>
 </body>
 </html>

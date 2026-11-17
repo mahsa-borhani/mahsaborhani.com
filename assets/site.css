@@ -206,8 +206,13 @@ h3.small{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(
 .foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .foot p{margin:0}
 .foot-links a{color:var(--muted);margin-left:14px;text-decoration:none}
-.foot-links a:first-child{margin-left:0}
+.foot-links > :first-child{margin-left:0}
 .foot-links a:hover{color:var(--ink)}
+.link-btn{background:none;border:0;padding:0;margin:0;font:inherit;color:var(--muted);cursor:pointer}
+.link-btn:hover{color:var(--ink)}
+.foot-links .link-btn,.foot-links .email-link{margin-right:14px}
+.copy-btn{font:600 13px var(--body);color:var(--muted);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:8px 14px;cursor:pointer}
+.copy-btn:hover{color:var(--ink)}
 
 /* case-study pages */
 .story-hero{background:linear-gradient(180deg,color-mix(in srgb,var(--c) 13%,var(--bg)) 0%,var(--bg) 100%);padding:40px 0 36px;border-bottom:1px solid var(--rule)}
